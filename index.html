@@ -1,0 +1,66 @@
+<!doctype html>
+
+    <head>
+        <meta charset="utf-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+        <meta name="viewport" content="width=device-width, initial-scale=1"> <!-- Bootstrap 4 -->
+
+        <title>UX Performance Demo</title>
+
+        <meta name="description" content="" />
+        <meta name="keywords" content="" />
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+        <!-- ICONS -->
+
+        <!-- THIRD PARTY STYLES -->
+        <link rel='stylesheet' href='lib/font-awesome-4.7.0/css/font-awesome.css' />
+        <link rel='stylesheet' href='lib/bootstrap-4.0.0/css/bootstrap.min.css' />
+
+        <!-- APPLICATION STYLES -->
+        <link rel='stylesheet' href='/styles/styles.css' />
+
+        <!-- GLOBAL LIBRARIES AND FRAMEWORK : These libraries can all be used by node types -->
+
+        <!-- jQuery -->
+        <script src="lib/jquery/jquery.min.js"></script>
+
+        <!-- Underscore -->
+        <script src="lib/underscore/underscore-1.7.0.min.js"></script>
+
+        <!-- Angular.js -->
+        <script src="lib/angular-1.6.6/angular.js"></script>
+        <script src="lib/angular-1.6.6/angular-sanitize.min.js"></script>
+        <script src="lib/angular-1.6.6/angular-animate.min.js"></script>
+
+
+        <!-- APPLICATION CODE -->
+        <script src="scripts/modules/PerfDemo/module.js"></script>
+            <!-- CLASSES -->
+            <!-- SERVICES -->
+            <!-- DIRECTIVES -->
+            <script src="scripts/modules/PerfDemo/directives/perf-main.dir.js"></script>
+
+        <!-- INITIALIZATION -->
+        <script>
+
+            (function(){
+
+                // when we are ready then start up the main workflow
+                angular.element(document).ready(function(){
+                    angular.bootstrap(document, ['PerfDemo']);
+                });
+
+            })();
+
+        </script>
+
+    </head>
+
+    <body>
+
+        <perf-main></perf-main>
+
+    </body>
+
+</html>
