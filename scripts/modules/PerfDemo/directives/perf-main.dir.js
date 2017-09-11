@@ -22,7 +22,12 @@
             },
 
             template: [
-                '<h1>Demo time</h1>'
+                '<div class="container">',
+                    '<h1 class="perf-main-title">Demo time</h1>',
+                    '<div class="alert alert-primary" role="alert">',
+                      'This is a primary alert—check it out!',
+                    '</div>',
+                '</div>'
             ].join('')
         };
     });

@@ -3,7 +3,8 @@
     /*========== MODULE DECLARATION ============*/
 
     angular.module('PerfDemo', [
-        'ngSanitize', 'ngAnimate'
+        'ngSanitize',
+        'ngAnimate'
     ]);
 
 
