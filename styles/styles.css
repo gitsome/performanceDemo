@@ -164,7 +164,7 @@ perf-user-details {
     display: block;
     position: fixed;
     top: 0;
-    right: 0;
+    left: 0%;
     width: 100%;
     height: 100%;
     z-index: 500;
@@ -176,22 +176,24 @@ perf-user-details {
 }
 
 perf-user-details.ng-enter {
-    width: 0%;
+    left: 100%;
     opacity: 0;
 }
 perf-user-details.ng-enter.ng-enter-active {
-    width: 100%;
+    left: 0%;
     opacity: 1.0;
 }
 
 perf-user-details.ng-leave {
-    width: 100%;
+    left: 0%;
     opacity: 1.0;
 }
 perf-user-details.ng-leave.ng-leave-active {
-    width: 0%;
+    left: 100%;
     opacity: 0;
 }
+
+
 .btn {
      cursor: pointer;
 }
