@@ -8,26 +8,42 @@
 
             controller: function ($scope) {
 
-                /*============= PRIVATE PROPERTIES / METHODS ============*/
-
                 /*============= MODEL ============*/
+
+                $scope.userSelected = false;
+
 
                 /*============= MODEL DEPENDENT METHODS ============*/
 
                 /*============= BEHAVIOR ===========*/
 
+
                 /*============= LISTENERS ============*/
+
+                $scope.$on('perf-user-faceted-search.userSelected', function (e, user) {
+                    $scope.userSelected = user;
+                });
+
+                $scope.$on('perf-user-details.done', function (e, user) {
+                    $scope.userSelected = false;
+                });
+
 
                 /*============= INITIALIZATION ============*/
             },
 
             template: [
-                '<div class="container">',
-                    '<h1 class="perf-main-title">Demo time</h1>',
-                    '<div class="alert alert-primary" role="alert">',
-                      'This is a primary alert—check it out!',
+
+                '<perf-header></perf-header>',
+
+                '<div class="perf-content">',
+                    '<div class="container">',
+                        '<perf-user-faceted-search></perf-user-faceted-search>',
                     '</div>',
-                '</div>'
+                '</div>',
+
+                '<perf-user-details ng-if="userSelected" user="userSelected"></perf-user-details>'
+
             ].join('')
         };
     });

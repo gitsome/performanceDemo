@@ -1,3 +1,196 @@
-.perf-main-title {
-    margin-top: 30px;
+h1 {
+    margin-bottom: 45px;
+}
+
+.well.well-thin {
+    padding: 8px;
+}
+
+.well {
+    min-height: 20px;
+    padding: 19px;
+    margin-bottom: 20px;
+    background-color: #f5f5f5;
+    border: 1px solid #e3e3e3;
+    border-radius: 4px;
+    box-shadow: 0px 0px 1px rgba(0, 0, 0, 0.1);
+}
+
+
+perf-main {
+    display: block;
+    height: 100%;
+    position: relative;
+    overflow: visible;
+}
+
+.perf-content {
+    padding-top: 145px;
+}
+
+perf-header {
+    z-index: 999;
+    display: block;
+    position: fixed;
+    top:0;
+    left:0;
+    width: 100%;
+    height: 100px;
+    padding: 15px;
+    background: rgba(230, 230, 230, 0.9);
+    border-bottom: 1px solid rgba(0,0,0, 0.1);
+}
+
+perf-header h1 {
+    padding: 0;
+    margin: 12px 0 0 0;
+}
+
+.perf-facet-list-facets {
+    background: rgba(255,255,255, 0.9);
+    padding: 8px 4px;
+}
+
+.perf-facet-list-facet {
+    margin-bottom: 15px;
+}
+.perf-facet-list-facet:last-child {
+    margin-bottom: 0px;
+}
+
+
+.perf-facet-list-facet-title {
+    font-weight: bold;
+    font-size: 110%;
+    border-bottom: 1px solid rgba(0,0,0, 0.1);
+    margin-bottom: 3px;
+    margin-top: 0px;
+}
+
+.perf-facet-list-facet-value {
+    position: relative;
+    cursor: pointer;
+    padding: 5px 0px 5px 0px;
+}
+.perf-facet-list-facet-value:hover {
+    background: rgba(0,0,0, 0.05);
+}
+.perf-facet-list-facet-value input {
+    position: absolute;
+    top: 11px;
+    left: 3px;
+}
+.perf-facet-list-facet-value-title {
+    padding-left: 25px;
+    padding-right: 50px;
+    font-size: 90%;
+    cursor: pointer;
+    text-transform: capitalize;
+    font-weight: normal;
+    margin-bottom: 0px;
+    word-wrap: break-word;
+}
+.perf-facet-list-facet-value-count {
+    font-size: 90%;
+    position: absolute;
+    right: 5px;
+    color: #007bff;
+}
+
+.user-card {
+    position: relative;
+    padding: 10px 10px 10px 80px;
+    cursor: pointer;
+}
+
+.perf-user-details {
+    position: absolute;
+    right: 0;
+    top: 13px;
+    text-align: right;
+}
+
+.user-card:hover {
+    background: rgba(0,0,0, 0.1);
+}
+.user-card:active {
+    background: rgba(0,0,0, 0.2);
+}
+
+.user-card h3 {
+    padding-top: 8px;
+    font-size: 18px;
+}
+
+.user-card .number-wrapper {
+    position: absolute;
+    left: 10px;
+    top: 10px;
+    padding: 5px;
+    background: rgba(0,0,0, 0.1);
+    width: 38px;
+    text-align: center;
+}
+
+perf-content-loading-placeholder {
+    display: block;
+    padding: 15px;
+    border: 2px dashed rgba(0,0,0, 0.3);
+}
+
+.well {
+    margin-bottom: 15px;
+}
+
+.perf-content-loading-placeholder-details {
+    cursor: pointer;
+    color: #007bff;
+}
+
+.perf-content-loading-placeholder-details:hover {
+    color: #185597;
+}
+
+perf-user-details {
+
+    padding-top: 190px;
+    display: block;
+    position: fixed;
+    top: 0;
+    left: 0%;
+    width: 100%;
+    height: 100%;
+    z-index: 500;
+
+    transition: all 800ms cubic-bezier(0.58, 0.6, 0, 0.99);
+
+    opacity: 1.0;
+    background: #fff;
+}
+
+perf-user-details.ng-enter {
+    left: 100%;
+    opacity: 0;
+}
+perf-user-details.ng-enter.ng-enter-active {
+    left: 0%;
+    opacity: 1.0;
+}
+
+perf-user-details.ng-leave {
+    left: 0%;
+    opacity: 1.0;
+}
+perf-user-details.ng-leave.ng-leave-active {
+    left: 100%;
+    opacity: 0;
+}
+.btn {
+     cursor: pointer;
+}
+
+.perf-user-details-close {
+    position: absolute;
+    top: 145px;
+    right: 15px;
 }
