@@ -148,7 +148,9 @@
                         $scope.$apply();
                     }, 300);
 
-                    var dataWasFiltered = function () {};
+                    var dataWasFiltered = function () {
+                        $scope.$broadcast('perf-paginated-users.requestUpdate', $scope.filteredUsersFilteredByFacets);
+                    };
 
                     var getUsers = function () {
                         return UsersService.getUsers();
@@ -196,9 +198,9 @@
                         $scope.softLimitAccepted = true;
                     };
 
-                    $scope.userSelected = function (user) {
+                    $scope.$on('perf-paginated-users.userSelected', function (e, user) {
                         $scope.$emit('perf-user-faceted-search.userSelected', user);
-                    };
+                    });
 
 
                     /*============ LISTENERS ============*/
@@ -274,11 +276,7 @@
                             '<div class="perf-content-loading-placeholder-details" ng-if="userNameFilterActive && !loading" ng-click="clearUserNameFilter()"><i class="fa fa-times-circle"></i> Clear the User Name Filter</div>',
                         '</perf-content-loading-placeholder>',
 
-                        '<ul class="list-unstyled search-result user-cards" ng-if="!loading && (!isOverSoftDisplayLimit || (isOverSoftDisplayLimit && softLimitAccepted)) && !isOverHardDisplayLimit">',
-                            '<li class="user user-card" ng-repeat="user in filteredUsersFilteredByFacets track by user.id" ng-click="userSelected(user)" perf-focusable>',
-                                '<perf-user-card user="user"></per-user-card>',
-                            '</li>',
-                        '</ul>',
+                        '<perf-paginated-users users="filteredUsersFilteredByFacets" ng-if="!loading"></perf-paginated-users>',
 
                         '<div aria-live="polite" aria-relevant="all" class="sr-only">{{ariaLiveMessage}}</div>',
 

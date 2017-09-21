@@ -6,11 +6,15 @@
 
             restrict: 'E',
 
+            scope: {
+                user: '='
+            },
+
             template: [
                 '<div class="row card-data">',
                     '<div class="number-wrapper">',
                         '<div class="list-number">',
-                            '<span class="value number">{{::$index + 1}}</span>',
+                            '<span class="value number">{{user._index}}</span>',
                         '</div>',
                     '</div>',
                     '<div class="card-wrapper">',
