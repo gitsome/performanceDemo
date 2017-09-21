@@ -52,7 +52,7 @@
 
                 finalUsers = [];
 
-                for (var i=0; i < 2; i++) {
+                for (var i=0; i < 20; i++) {
                     _.each(fakeUsers, function (user) {
                         finalUsers.push($.extend(true, {}, user));
                     });
