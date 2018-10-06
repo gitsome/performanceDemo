@@ -26,14 +26,13 @@
             var finalUsers;
 
             var iPhoneModels = [
-                'iPhone SE',
-                'iPhone 6',
-                'iPhone 6s',
                 'iPhone 7',
                 'iPhone 7 Plus',
                 'iPhone 8',
                 'iPhone 8 Plus',
-                'iPhone X'
+                'iPhone XS R',
+                'iPhone XS',
+                'iPhone XS Max'
             ];
 
             var addMetaData = function (user) {
